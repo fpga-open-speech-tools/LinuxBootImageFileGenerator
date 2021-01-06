@@ -1836,9 +1836,9 @@ if __name__ == '__main__':
     print('-> Print the loaded Partition table')
     bootImageCreator.printPartitionTable()
 
-    _wait2_ = input('Start generating the image by typing anything to continue ... (q/Q for quite) ')
-    if _wait2_ == 'q' or _wait2_ == 'Q':
-        sys.exit()
+    # _wait2_ = input('Start generating the image by typing anything to continue ... (q/Q for quite) ')
+    # if _wait2_ == 'q' or _wait2_ == 'Q':
+    #     sys.exit()
 
 
 ############################################# Create the new Image File ###################################################
