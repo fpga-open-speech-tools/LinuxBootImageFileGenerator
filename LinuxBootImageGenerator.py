@@ -1435,6 +1435,7 @@ class BootImageCreator:
 
         # Read if a error occurs 
         process.wait()
+        self.__print(diagnosticOutput,'   Returncode '+ str(returncode))
         if process.returncode !=0: 
             self.__unmountDeleteLoopbacks(diagnosticOutput)
             raise Exception('Formating with '+str(TypeError)+' failed')
