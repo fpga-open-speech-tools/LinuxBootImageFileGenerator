@@ -1684,7 +1684,7 @@ if __name__ == '__main__':
         print('   Open the "DistroBlueprint.xml" with a text editor ')
         print('   to configure the partition table of Image file to create')
 
-        _wait_ = input('Type anything to continue ... ')
+        # _wait_ = input('Type anything to continue ... ')
 
     ############################################ Read the XML Blueprint file  ###########################################
     ####################################### & Process the settings of a partition   ####################################
@@ -1798,7 +1798,8 @@ if __name__ == '__main__':
     print('#        Any other input: Do not compress the output image                   #')
     print('#                                                                            #')
     print('##############################################################################')
-    _wait_ = input('#              Please type ...                                               #')
+    # _wait_ = input('#              Please type ...                                               #')
+    _wait_  = 'n'
     if _wait_ == 'q' or _wait_ == 'Q':
         sys.exit()
     elif _wait_ =='Y' or _wait_ =='y':
