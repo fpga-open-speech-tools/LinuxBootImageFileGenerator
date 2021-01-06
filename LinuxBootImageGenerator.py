@@ -71,7 +71,7 @@ from datetime import datetime
 #
 #
 #
-DELAY_MS = 3 # Delay after critical tasks in milliseconds 
+DELAY_MS = 5 # Delay after critical tasks in milliseconds 
 
 # 
 #
