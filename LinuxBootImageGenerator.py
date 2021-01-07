@@ -1684,8 +1684,6 @@ if __name__ == '__main__':
         print('   Open the "DistroBlueprint.xml" with a text editor ')
         print('   to configure the partition table of Image file to create')
 
-        # _wait_ = input('Type anything to continue ... ')
-
     ############################################ Read the XML Blueprint file  ###########################################
     ####################################### & Process the settings of a partition   ####################################
     print('---> Read the XML blueprint file ')
@@ -1788,26 +1786,33 @@ if __name__ == '__main__':
                                 str(part.id)+' Filesystem: '+part.type+' Size: '+str(part.size_str))
     print('#                                                                            #')
     print('##############################################################################')
-    print('#                                                                            #')
-    print('#                    Compress the output image file?                         #')
-    print('#     Should the output file be compressed as .zip to reduce the size        #')
-    print('#     Image creator tools like "Rufus" can directly work with .zip files     #')
-    print('#                                                                            #')
-    print('#        Y: Compress the output image as .zip                                #')
-    print('#        Q: Quit the script                                                  #')
-    print('#        Any other input: Do not compress the output image                   #')
-    print('#                                                                            #')
-    print('##############################################################################')
-    # _wait_ = input('#              Please type ...                                               #')
-    _wait_  = 'n'
-    if _wait_ == 'q' or _wait_ == 'Q':
-        sys.exit()
-    elif _wait_ =='Y' or _wait_ =='y':
-        compress_output = True
-    else:
-        compress_output = False
-    print('##############################################################################')
 
+    '''
+    ENHANCEMENT UPDATE: Replace the User Input Functionality with Command Line Inputs
+        - Name of the .img output file
+        - Compress the Image to a Zip File and Name It
+
+    ORIGINAL CODE:    
+    # print('#                                                                            #')
+    # print('#                    Compress the output image file?                         #')
+    # print('#     Should the output file be compressed as .zip to reduce the size        #')
+    # print('#     Image creator tools like "Rufus" can directly work with .zip files     #')
+    # print('#                                                                            #')
+    # print('#        Y: Compress the output image as .zip                                #')
+    # print('#        Q: Quit the script                                                  #')
+    # print('#        Any other input: Do not compress the output image                   #')
+    # print('#                                                                            #')
+    # print('##############################################################################')
+    # _wait_ = input('#              Please type ...                                               #')
+    # if _wait_ == 'q' or _wait_ == 'Q':
+    #     sys.exit()
+    # elif _wait_ =='Y' or _wait_ =='y':
+    #     compress_output = True
+    # else:
+    #     compress_output = False
+    # print('##############################################################################')
+    compress_output = False
+    '''
 ################################## Scan the partition folders to list all directories #######################################
     print('\n---> Scan every partition folder to find all file directories')
     print('      and calculate the total partition size')
@@ -1835,11 +1840,6 @@ if __name__ == '__main__':
 ############################################# Print the partition table ###################################################
     print('-> Print the loaded Partition table')
     bootImageCreator.printPartitionTable()
-
-    # _wait2_ = input('Start generating the image by typing anything to continue ... (q/Q for quite) ')
-    # if _wait2_ == 'q' or _wait2_ == 'Q':
-    #     sys.exit()
-
 
 ############################################# Create the new Image File ###################################################
     bootImageCreator.generateImage()
