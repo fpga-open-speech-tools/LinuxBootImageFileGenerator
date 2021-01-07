@@ -1811,8 +1811,8 @@ if __name__ == '__main__':
     # else:
     #     compress_output = False
     # print('##############################################################################')
-    compress_output = False
     '''
+    compress_output = False
 ################################## Scan the partition folders to list all directories #######################################
     print('\n---> Scan every partition folder to find all file directories')
     print('      and calculate the total partition size')
